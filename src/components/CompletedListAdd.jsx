@@ -1,22 +1,11 @@
-import {useState} from 'react'
+import { useState } from "react";
 
 function CompletedListAdd(props) {
-   
-    
-
-    return (
-
-        <section>
-
-            <label htmlFor='todo'>
-                Completed:
-            </label>
-            
-        
-        
-        </section>
-    )
-
+  return (
+    <section>
+      <label htmlFor="completed">Completed:</label>
+    </section>
+  );
 }
 
-export default CompletedListAdd
+export default CompletedListAdd;

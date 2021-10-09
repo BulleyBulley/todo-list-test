@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <ListAdd setList={setList} />
-      <ShowList list={list} />
+      <ShowList list={list} setList={setList}/>
       
       <ShowCompletedList list={list} />
     </div>
