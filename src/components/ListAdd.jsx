@@ -17,11 +17,12 @@ function ListAdd(props) {
     }
 
     return (
-
+        <section>
+            <h2> ToDo</h2>
         <form onSubmit={handleSubmit}>
 
             <label htmlFor='todo'>
-                ToDo:
+                Task:
             </label>
             <input
             type="text"
@@ -32,6 +33,7 @@ function ListAdd(props) {
         
         <button type="submit"> Add Task </button>
         </form>
+        </section>
     )
 }
 

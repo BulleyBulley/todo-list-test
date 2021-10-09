@@ -6,7 +6,11 @@ function ShowList(props) {
     return (   
         <ul>
             {list.map((item) => {
-                return <li key={item.task}>{item.task}</li>
+                return <li key={item.task}>
+                    <button>Remove Task</button>
+                    {item.task}
+                    <button>Move to Completed</button>
+                </li>
             })}
         </ul>
     )
