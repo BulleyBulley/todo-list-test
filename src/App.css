@@ -1,10 +1,125 @@
 .App {
 
-margin: 0
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 5fr;
+    
+    background: url(./images/cool-background.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+   
+
+    font-family:monospace;
+    
+    
+    grid-template-areas:
+      "header header header"
+      "task todo completed ";  
+         
 }
 
 header {
-
- font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    grid-area: header;
+   
 }
+
+button {
+    text-decoration: none;
+  border: 0.1vw solid #010100;
+  padding: 1vw;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  position: relative;
+  display: inline-block;
+   
+  
+}
+
+button:hover {
+    filter: brightness(60%);
+    transition: 500ms;
+}
+
+
+
+
+.list_add_class {
+    display: grid;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-area: task;
+    font-size: 1.5rem;
+    
+    
+    
+     
+}
+.list_add_class .input_box {
+    width: 20vw;
+    font-size: 1.5rem;
+}
+
+.list_add_class button {
+    display: block;
+    margin-top: 5vh;
+}
+
+.show_list_class {
+    display: grid;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-area: todo;
+    font-size: 1.5rem;
+   
+}
+
+.show_list_class li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 4vh;
+    border:thin;
+    
+ 
+}
+
+
+.show_completed_list {
+    display: grid;
+    justify-content: center;
+    align-content: flex-start;
+    font-size: 1.5rem;
+    grid-area: completed;
+    
+}
+
+.show_completed_list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 4vh;
+    border:thin;
+    text-decoration:line-through;
+    filter: brightness(70%);
+    
+}
+
+  
+  h1, h2 {
+    font-family:monospace;
+  }
+  
+  .input_box {
+      border-radius: 3vw;
+        padding: 0.5vw
+  }
+
+  
+ 

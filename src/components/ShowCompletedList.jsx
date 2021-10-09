@@ -18,15 +18,15 @@ function ShowCompletedList(props) {
   };
 
   return (
-    <section>
-      <h2>Completed</h2>
+    <section className="show_completed_list">
+      <h2>Completed:</h2>
       <ul>
         {list.map((item) => {
           if (item.completed === true) {
             return (
               <li key={item.task}>
                 <button onClick={() => handleDelete(item.task)}>
-                  Remove Completed Task
+                  Remove
                 </button>
                 {item.task}
                 <button

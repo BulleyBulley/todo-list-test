@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function CompletedListAdd(props) {
   return (
-    <section>
+    <section className="completed_list_class">
       <label htmlFor="completed">Completed:</label>
     </section>
   );

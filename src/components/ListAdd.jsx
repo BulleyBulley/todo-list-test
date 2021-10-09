@@ -16,12 +16,12 @@ function ListAdd(props) {
   }
 
   return (
-    <section>
-      <h2> ToDo</h2>
+    <section className="list_add_class">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="todo">Task:</label>
+        <label htmlFor="todo"><h2>Task:</h2></label>
         <input
           type="text"
+          className="input_box"
           required
           value={newListItem}
           onChange={(event) => setNewListItem(event.target.value)}

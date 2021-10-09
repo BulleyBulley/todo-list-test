@@ -20,26 +20,29 @@ function ShowList(props) {
   }
   
   return (
+      <section className="show_list_class">
+        <h2>ToDo:</h2>
     <ul>
       {list.map((item) => {
         if (item.completed === false) {
           return (
             <li key={item.task}>
-              <button type="button" onClick={() => handleDelete(item.task)}>
-                Remove Task
+              <button type="button" className="list_button" onClick={() => handleDelete(item.task)}>
+                Remove
               </button>
               {item.task}
               <button
                 type="button"
                 onClick={() => updateStatus(item.task, true)}
               >
-                Move to Completed
+                Completed
               </button>
             </li>
           );
         }
       })}
     </ul>
+    </section>
   );
 }
 
