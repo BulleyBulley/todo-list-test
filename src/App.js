@@ -11,13 +11,14 @@ function App() {
 
   const [list, setList] = useState([])
   
+  
   return (
     <div className="App">
       <Header />
       <ListAdd setList={setList} />
       <ShowList list={list} setList={setList}/>
       
-      <ShowCompletedList list={list} />
+      <ShowCompletedList list={list} setList={setList} />
     </div>
   );
 }

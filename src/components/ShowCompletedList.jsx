@@ -1,5 +1,21 @@
 function ShowCompletedList(props) {
   const { list } = props;
+  const { setList } = props;
+
+  function handleDelete(task) {
+    const newList = list.filter((item) => item.task !== task);
+    setList(newList);
+  }
+
+  const updateStatusToDo = (task, newStatus) => {
+    const newList = list.map((item) => {
+      if (item.task === task) {
+        item.completed = false;
+      }
+      return item;
+    });
+    setList(newList);
+  };
 
   return (
     <section>
@@ -9,9 +25,13 @@ function ShowCompletedList(props) {
           if (item.completed === true) {
             return (
               <li key={item.task}>
-                <button>Remove Completed Task</button>
+                <button onClick={() => handleDelete(item.task)}>
+                  Remove Completed Task
+                </button>
                 {item.task}
-                <button>Move back to ToDo</button>
+                <button
+                onClick={() => updateStatusToDo(item.task, false)}
+                >Move back to ToDo</button>
               </li>
             );
           }
