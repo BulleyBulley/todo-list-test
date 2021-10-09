@@ -7,13 +7,13 @@ import ShowList from './components/ShowList.jsx';
 
 function App() {
 
-  const [list, setList] = useState('')
+  const [list, setList] = useState([])
 
   return (
     <div className="App">
       <Header />
       <ListAdd setList={setList} />
-      <ShowList list={list}/>
+      <ShowList list={list} />
     </div>
   );
 }

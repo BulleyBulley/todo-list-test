@@ -3,17 +3,17 @@ import {useState} from 'react'
 function ListAdd(props) {
 
     const { setList } = props
-    const [newListItem, setNewListItem] = useState();
+    const [newListItem, setNewListItem] = useState('');
 
     function handleSubmit(event) {
         event.preventDefault();
         setList((currList) => {
-            const itemToAdd = newListItem
+            const itemToAdd = {task: newListItem, completed: false};
             const updatedList = [...currList, itemToAdd]
-            console.log(updatedList)
+            
             return updatedList;
         })
-        setNewListItem('')
+        setNewListItem('');
     }
 
     return (

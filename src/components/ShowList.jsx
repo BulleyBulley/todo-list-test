@@ -1,18 +1,15 @@
 function ShowList(props) {
     const { list } = props;
-    console.log(list)
+    
 
 
-    return (
+    return (   
         <ul>
-
             {list.map((item) => {
-                return <li key={item}>{item}</li>
+                return <li key={item.task}>{item.task}</li>
             })}
         </ul>
     )
-
-
 }
 
 export default ShowList
