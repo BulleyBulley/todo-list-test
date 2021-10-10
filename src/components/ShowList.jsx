@@ -23,6 +23,7 @@ function ShowList(props) {
   };
 
   function handleOnDragEnd(result) {
+    if (!result.destination) return;
     const items = Array.from(list);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
@@ -32,8 +33,8 @@ function ShowList(props) {
   return (
     <section className="show_list_class">
       <h2>ToDo:</h2>
-      
-        <DragDropContext onDragEnd={handleOnDragEnd}>
+
+      <DragDropContext onDragEnd={handleOnDragEnd}>
         <Droppable droppableId="list">
           {(provided) => (
             <ul {...provided.droppableProps} ref={provided.innerRef}>
