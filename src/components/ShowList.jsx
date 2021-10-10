@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function ShowList(props) {
   const { list } = props;
   const { setList } = props;
