@@ -80,6 +80,10 @@ button:hover {
   min-height: 7vh;
 }
 
+.show_list_class button {
+  font-size: 0.5em;
+}
+
 .show_completed_list {
   display: grid;
   justify-content: center;
@@ -98,6 +102,10 @@ button:hover {
   filter: brightness(70%);
   background-color: rgba(112, 108, 108, 0.2);
   border-radius: 20vh;
+}
+
+.show_completed_list button {
+  font-size: 0.5em;
 }
 
 h1,
