@@ -7,10 +7,10 @@ function ShowCompletedList(props) {
     setList(newList);
   }
 
-  const updateStatusToDo = (task, newStatus) => {
+  const updateStatus = (task, newStatus) => {
     const newList = list.map((item) => {
       if (item.task === task) {
-        item.completed = false;
+        item.completed = newStatus;
       }
       return item;
     });
@@ -30,7 +30,7 @@ function ShowCompletedList(props) {
                 </button>
                 {item.task}
                 <button
-                onClick={() => updateStatusToDo(item.task, false)}
+                onClick={() => updateStatus(item.task, false)}
                 >Move back to ToDo</button>
               </li>
             );

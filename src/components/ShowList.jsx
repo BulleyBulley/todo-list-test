@@ -12,7 +12,7 @@ function ShowList(props) {
   const updateStatus = (task, newStatus) => {
     const newList = list.map((item) => {
         if (item.task === task) {
-            item.completed = true
+            item.completed = newStatus
         }
         return item
     })

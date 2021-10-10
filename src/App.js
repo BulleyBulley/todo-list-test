@@ -7,6 +7,7 @@ import ShowList from './components/ShowList.jsx';
 import ShowCompletedList from './components/ShowCompletedList';
 
 
+
 function App() {
 
   const [list, setList] = useState([])
@@ -19,6 +20,7 @@ function App() {
       <ListAdd setList={setList} />
       <ShowList list={list} setList={setList}/>
       <ShowCompletedList list={list} setList={setList} />
+
         
     </div>
     
